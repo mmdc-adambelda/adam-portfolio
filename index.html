@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Adam Belda | IT Operations Director</title>
-<meta name="description" content="Adam Belda portfolio landing page showcasing IT operations, client success, systems leadership, automation, and digital project execution." />
+<title>Adam Raymond Belda | Service Desk Manager</title>
+<meta name="description" content="Adam Raymond Belda - IT Operations Manager and Service Desk Manager with 15 years in IT. Service desk leadership, ITSM and ticketing, incident and outage management, SLA and KPI governance, and client onboarding." />
+<meta name="author" content="Adam Raymond Belda" />
+<meta property="og:title" content="Adam Raymond Belda | Service Desk Manager" />
+<meta property="og:description" content="IT Operations Manager and Service Desk Manager. 15 years in IT, service desks of up to 25 FTEs, JIRA Service Desk and ServiceNow, ISO 27001 certification lead." />
+<meta property="og:type" content="profile" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -148,8 +152,8 @@
 
   .hero-copy h1 {
     margin: 16px 0 18px;
-    font-size: clamp(54px, 9vw, 118px);
-    line-height: .9;
+    font-size: clamp(48px, 8vw, 104px);
+    line-height: .92;
     letter-spacing: -.06em;
     max-width: 900px;
   }
@@ -279,7 +283,7 @@
 
   .section-title h2 {
     margin: 12px 0 0;
-    font-size: clamp(34px, 6vw, 72px);
+    font-size: clamp(34px, 6vw, 68px);
     line-height: .96;
     letter-spacing: -.05em;
   }
@@ -305,8 +309,8 @@
 
   .lead {
     margin: 0;
-    font-size: 26px;
-    line-height: 1.35;
+    font-size: 24px;
+    line-height: 1.4;
     letter-spacing: -.03em;
   }
 
@@ -337,13 +341,81 @@
     letter-spacing: .12em;
   }
 
-  .experience-grid {
+  .info-item strong { font-weight: 600; }
+
+  /* Experience timeline */
+  .timeline {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .exp-card {
+    border-radius: 24px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .exp-card::before {
+    content: "";
+    position: absolute;
+    right: -18px;
+    bottom: -18px;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(255,255,255,.05), transparent 70%);
+    pointer-events: none;
+  }
+
+  .exp-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 14px;
+    align-items: start;
+    margin-bottom: 18px;
+  }
+
+  .exp-card h3 {
+    margin: 0 0 6px;
+    font-size: 27px;
+    letter-spacing: -.04em;
+    line-height: 1.08;
+  }
+
+  .exp-card h4 {
+    margin: 0;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .exp-date {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--muted);
+    white-space: nowrap;
+    padding-top: 6px;
+  }
+
+  .exp-card ul,
+  .panel ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--muted);
+  }
+
+  .exp-card li { margin-bottom: 8px; }
+  .exp-card li:last-child { margin-bottom: 0; }
+
+  .cap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 22px;
   }
 
-  .exp-card,
   .project-card {
     border-radius: 24px;
     padding: 28px;
@@ -351,7 +423,6 @@
     overflow: hidden;
   }
 
-  .exp-card::before,
   .project-card::before {
     content: "";
     position: absolute;
@@ -360,42 +431,17 @@
     width: 120px;
     height: 120px;
     background: radial-gradient(circle, rgba(255,255,255,.05), transparent 70%);
+    pointer-events: none;
   }
 
-  .exp-meta {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 16px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: .14em;
-    color: var(--muted);
-  }
-
-  .exp-card h3,
   .project-card h3 {
-    margin: 0 0 6px;
-    font-size: 28px;
-    letter-spacing: -.04em;
-    line-height: 1.05;
+    margin: 0 0 10px;
+    font-size: 22px;
+    letter-spacing: -.03em;
+    line-height: 1.15;
   }
 
-  .exp-card h4 {
-    margin: 0 0 14px;
-    font-size: 14px;
-    color: var(--accent);
-    letter-spacing: .12em;
-    text-transform: uppercase;
-  }
-
-  .exp-card p,
-  .project-card p,
-  .project-card ul,
-  .panel ul {
-    margin: 0;
-    color: var(--muted);
-  }
+  .project-card p { margin: 0; color: var(--muted); }
 
   .chips {
     display: flex;
@@ -404,30 +450,19 @@
   }
 
   .chip {
-    padding: 12px 16px;
+    padding: 11px 16px;
     border-radius: 999px;
     border: 1px solid var(--line);
     background: rgba(255,255,255,.04);
     font-weight: 600;
+    font-size: 15px;
   }
 
-  .project-list {
-    display: grid;
-    gap: 18px;
+  .chip.is-key {
+    border-color: rgba(215,255,63,.35);
+    background: var(--accent-soft);
+    color: var(--accent);
   }
-
-  .links-list {
-    display: grid;
-    gap: 10px;
-    margin-top: 18px;
-  }
-
-  .links-list a {
-    color: var(--text);
-    opacity: .86;
-  }
-
-  .links-list a:hover { opacity: 1; color: var(--accent); }
 
   .cta-box {
     border-radius: 30px;
@@ -444,17 +479,18 @@
     width: 260px;
     height: 260px;
     background: radial-gradient(circle, rgba(215,255,63,.16), transparent 70%);
+    pointer-events: none;
   }
 
   .cta-box h2 {
     margin: 14px 0 10px;
-    font-size: clamp(34px, 5vw, 58px);
-    line-height: .98;
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1;
     letter-spacing: -.05em;
   }
 
   .cta-box p {
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto;
     color: var(--muted);
     font-size: 17px;
@@ -489,10 +525,11 @@
     .about-grid,
     .skills-grid,
     .contact-grid,
-    .experience-grid,
     .section-title {
       grid-template-columns: 1fr;
     }
+
+    .cap-grid { grid-template-columns: 1fr 1fr; }
   }
 
   @media (max-width: 780px) {
@@ -514,9 +551,12 @@
     }
 
     .hero-stats,
-    .experience-grid {
+    .cap-grid {
       grid-template-columns: 1fr;
     }
+
+    .exp-head { grid-template-columns: 1fr; }
+    .exp-date { padding-top: 0; }
 
     .info-item {
       grid-template-columns: 1fr;
@@ -545,8 +585,8 @@
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#toolkit">Toolkit</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -556,42 +596,42 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">IT Operations Director / Client Success</div>
-          <h1>Scaling systems. Powering execution.</h1>
+          <div class="eyebrow">IT Operations Manager / Service Desk Manager</div>
+          <h1>Service desks that hold their SLA.</h1>
           <p>
-            I’m Adam Raymond Belda, a Certified Project Manager and Scrum Master with 13+ years of IT experience across operations, software support, automation, CRM systems, client success, and digital delivery.
+            I am Adam Raymond Belda, a Certified Project Manager and Scrum Master with 15 years of IT experience. I build and run service desks: ticketing and automation, incident and outage management, SLA and KPI reporting, and client onboarding through go-live.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:abelda@gemucubesolutions.com">Email Adam</a>
-            <a class="btn btn-secondary" href="#contact">Let’s Connect</a>
+            <a class="btn btn-primary" href="mailto:argbelda@gmail.com">Email Adam</a>
+            <a class="btn btn-secondary" href="#experience">View Experience</a>
           </div>
 
           <div class="hero-stats">
             <div class="stat-card">
-              <strong>13+</strong>
-              <span>Years in IT, systems support, and operations leadership</span>
+              <strong>15 yrs</strong>
+              <span>In IT support, service desk, and operations leadership</span>
             </div>
             <div class="stat-card">
-              <strong>4</strong>
-              <span>Core enterprise roles spanning support, operations, and client success</span>
+              <strong>25 FTE</strong>
+              <span>Largest service desk team led, handling production issues</span>
             </div>
             <div class="stat-card">
-              <strong>10+</strong>
-              <span>Major platforms, products, and digital ecosystems contributed to</span>
+              <strong>ISO 27001</strong>
+              <span>Certification led to completion for the organisation</span>
             </div>
           </div>
         </div>
 
         <div class="hero-card">
           <div class="portrait-shell">
-            <img src="1695391712176.jpg" alt="Adam Belda portrait" loading="eager">
+            <img src="1695391712176.jpg" alt="Portrait of Adam Raymond Belda" loading="eager">
           </div>
           <div class="identity">
             <div>
               <h2>Adam Raymond Belda</h2>
-              <p>General Trias City, Cavite 4107<br>abelda@gemucubesolutions.com<br>+63 947 895 4125</p>
+              <p>General Trias City, Cavite 4107<br>argbelda@gmail.com<br>+63 956 899 2023</p>
             </div>
-            <div class="identity-tag">Portfolio 2026</div>
+            <div class="identity-tag">Service Desk</div>
           </div>
         </div>
       </div>
@@ -602,32 +642,47 @@
         <div class="section-title">
           <div>
             <div class="eyebrow">About</div>
-            <h2>Strategic technical leadership with delivery-first thinking.</h2>
+            <h2>Service desk leadership with real engineering depth.</h2>
           </div>
           <p>
-            Adam brings a rare combination of technical depth, project leadership, client success, and digital execution, with hands-on experience across software architecture, support systems, automation, and business growth.
+            Fifteen years across L3 helpdesk, enterprise software support, and service desk management, in organisations serving clients in Australia, Dubai, China, South Korea, and the United States.
           </p>
         </div>
 
         <div class="about-grid">
           <div class="panel">
             <p class="lead">
-              Passionate about building scalable systems, improving workflows, and bridging technical and non-technical stakeholders to deliver high-quality digital outcomes.
+              My passion for technology, combined with a deep understanding of software architecture, has let me consistently exceed project expectations. I thrive in collaborative environments where I use strong problem solving and clear communication to bridge technical and non-technical stakeholders.
             </p>
+            <div class="eyebrow" style="margin-top:28px;">Certifications &amp; Awards</div>
+            <ul style="margin-top:16px; line-height:1.9;">
+              <li>Certified Lean Six Sigma Black Belt</li>
+              <li>Certified Project Manager Professional</li>
+              <li>Certified Scrum Master</li>
+              <li>Certified SAP Engineer and Tech Consultant, LMS</li>
+              <li>Top Tech Writer and Male Content Creator in the Philippines, Feedspot award</li>
+            </ul>
           </div>
           <div class="panel">
             <div class="info-list">
               <div class="info-item">
                 <span>Role</span>
-                <strong>IT Operations Director / Client Success Leader</strong>
+                <strong>IT Operations Manager / Service Desk Manager</strong>
               </div>
               <div class="info-item">
-                <span>Specialties</span>
-                <strong>Operations, CRM systems, automation, web development, project delivery, support leadership</strong>
+                <span>Focus</span>
+                <strong>Service desk operations, ITSM and ticketing, incident and outage management, SLA and KPI governance, client onboarding, team leadership</strong>
+              </div>
+              <div class="info-item">
+                <span>Location</span>
+                <strong>General Trias City, Cavite 4107, Philippines</strong>
               </div>
               <div class="info-item">
                 <span>Education</span>
-                <strong>Mapua Malayan Digital College · BSIT (Software Development)<br>Lyceum of the Philippines University - Cavite · AB Multimedia Arts</strong>
+                <strong>
+                  Mapua Malayan Digital College &middot; BS Information Technology, major in Software Development &middot; Class of 2026, Pioneer Batch &middot; Magna Cum Laude, 1.26 GWA<br><br>
+                  Lyceum of the Philippines University, Cavite &middot; AB Multimedia Arts, major in Film Production
+                </strong>
               </div>
             </div>
           </div>
@@ -639,134 +694,194 @@
       <div class="container">
         <div class="section-title">
           <div>
-            <div class="eyebrow">Experience</div>
-            <h2>Built on enterprise support, operations leadership, and client delivery.</h2>
+            <div class="eyebrow">Work Experience</div>
+            <h2>Ten years running and escalating enterprise support.</h2>
           </div>
           <p>
-            From SAP support and escalation handling to directing IT operations and compliance-focused onboarding systems, Adam’s background is built for modern digital organizations.
+            From L3 helpdesk for McDonald&rsquo;s US at Atos, to SAP LMS support, to managing service desks of up to 25 FTEs across two organisations.
           </p>
         </div>
 
-        <div class="experience-grid">
+        <div class="timeline">
           <article class="exp-card">
-            <div class="exp-meta"><span>Sept 2024 — Jan 2026</span><span>Client Success</span></div>
-            <h3>MEDVA / Deel PH EOR Services</h3>
-            <h4>IT Client Success Manager</h4>
-            <p>Created effective onboarding processes for staff and clients, structured automation, developed encrypted BYOD environments, and helped ensure ISO and HIPAA-compliant operations while managing IT implementation specialists.</p>
-          </article>
-
-          <article class="exp-card">
-            <div class="exp-meta"><span>Nov 2022 — July 2024</span><span>Operations Leadership</span></div>
-            <h3>NXTGEN Industries</h3>
-            <h4>IT Operations Director</h4>
-            <p>Led technical direction and business-facing systems strategy, combining leadership and technical execution to deliver stronger digital value for the brand and its stakeholders.</p>
-          </article>
-
-          <article class="exp-card">
-            <div class="exp-meta"><span>Nov 2021 — Nov 2022</span><span>Support Leadership</span></div>
-            <h3>EMAPTA Philippines Inc.</h3>
-            <h4>Senior Support Engineer Lead / Supervisor</h4>
-            <p>Troubleshot and resolved escalated issues across cloud applications, UI, databases, server networks, and certificate renewals while leading support engineers and running recurring SLA sync meetings with stakeholders.</p>
-          </article>
-
-          <article class="exp-card">
-            <div class="exp-meta"><span>June 2020 — October 2021</span><span>Software Support</span></div>
-            <h3>SAP Philippines</h3>
-            <h4>Software Support Engineer</h4>
-            <p>Served as a technical authority for SAP Learning Management Systems, resolving front-end and back-end issues using HTML, JavaScript, SCORM, and database coordination while supporting SCRUM and sprint stakeholder workflows.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <div class="eyebrow">Projects & Contributions</div>
-            <h2>From websites and apps to logistics platforms and game ecosystems.</h2>
-          </div>
-          <p>
-            Adam’s portfolio covers web builds, application contributions, remote freelance work, and support for high-traffic digital products across multiple industries.
-          </p>
-        </div>
-
-        <div class="skills-grid">
-          <div class="project-list">
-            <article class="project-card">
-              <h3>Developed Websites</h3>
-              <p>Built and supported websites including taskproleague.com, nxtgenindustries.com.au, business.gemucube.com, gemucube.com, karlaniiinz.com, and travelwithkarla.com.</p>
-            </article>
-            <article class="project-card">
-              <h3>Co-Developed Applications</h3>
-              <p>Contributed to products and platforms such as GrabPay Wallet, PayMaya, Booking.com, Agoda, FoodPanda Wallet, Watsons eCommerce, Security Bank Mobile App, e2open Cloud Logistics, Unilever TMS, and Maersk Ocean Shipping TMS.</p>
-            </article>
-            <article class="project-card">
-              <h3>Remote Freelance Experience</h3>
-              <p>Worked across Lemon Wallet, Colorado Doctor of Chiropractic, Impero, and Dubai MetroRail System on executive support, video editing, payment workflows, SEO, and robotics-related initiatives.</p>
-            </article>
-          </div>
-
-          <div class="panel">
-            <div class="eyebrow">Featured Scope</div>
-            <p class="lead" style="margin-top:14px;">A multidisciplinary portfolio spanning operations, digital production, software support, brand systems, and user-facing platforms.</p>
-            <div class="links-list">
-              <a href="https://www.nxtgenindustries.com.au" target="_blank" rel="noopener noreferrer">NXTGEN Industries</a>
-              <a href="https://www.gemucube.com" target="_blank" rel="noopener noreferrer">Gemucube</a>
-              <a href="https://www.business.gemucube.com" target="_blank" rel="noopener noreferrer">Gemucube Business</a>
-              <a href="https://www.taskproleague.com" target="_blank" rel="noopener noreferrer">TaskPro League</a>
+            <div class="exp-head">
+              <div>
+                <h3>Amihan Solutions</h3>
+                <h4>Service Desk Manager</h4>
+              </div>
+              <div class="exp-date">Sept 2024 &mdash; Aug 2026</div>
             </div>
-          </div>
+            <ul>
+              <li>Managed 18 developers and a 2-person IT service desk.</li>
+              <li>Owned the automation and the overall ticketing system on JIRA Service Desk.</li>
+              <li>Ran client onboarding into the service desk through to go-live.</li>
+              <li>Delivered weekly and monthly SLA and KPI reports to internal and external stakeholders.</li>
+              <li>Drove incident and outage management.</li>
+            </ul>
+          </article>
+
+          <article class="exp-card">
+            <div class="exp-head">
+              <div>
+                <h3>NXTGEN Industries &middot; Melbourne, Australia</h3>
+                <h4>Service Desk Manager</h4>
+              </div>
+              <div class="exp-date">Nov 2022 &mdash; July 2024</div>
+            </div>
+            <ul>
+              <li>Managed a 25-FTE service desk team handling production issues and maintaining service desk SLA on JIRA.</li>
+              <li>Handled 20 software engineers and 5 application support staff.</li>
+              <li>Assigned to Dubai, China, and South Korea for project initiation.</li>
+              <li>Led the ISO 27001 certification of the organisation.</li>
+            </ul>
+          </article>
+
+          <article class="exp-card">
+            <div class="exp-head">
+              <div>
+                <h3>EMAPTA Philippines Inc.</h3>
+                <h4>Service Desk Lead / Senior Support Engineer</h4>
+              </div>
+              <div class="exp-date">Nov 2021 &mdash; Nov 2022</div>
+            </div>
+            <ul>
+              <li>Troubleshot and resolved escalated, critical issues on client cloud applications, covering TMS UI, databases, server networks, and certificate renewals.</li>
+              <li>Led a team of support engineers, developing their skills and lifting team productivity.</li>
+              <li>Ran biweekly stakeholder meetings for SLA sync-up.</li>
+              <li>Used Salesforce Service Desk ticketing, Confluence, and JIRA for project management.</li>
+            </ul>
+          </article>
+
+          <article class="exp-card">
+            <div class="exp-head">
+              <div>
+                <h3>SAP Philippines</h3>
+                <h4>Software Support Engineer</h4>
+              </div>
+              <div class="exp-date">June 2020 &mdash; Oct 2021</div>
+            </div>
+            <ul>
+              <li>Acted as the trusted technical authority for the SAP Learning Management System.</li>
+              <li>Resolved complex front-end and back-end LMS issues using HTML, JavaScript, and SCORM.</li>
+              <li>Managed the multi-client database and handled stakeholders across SCRUM and sprint meetings.</li>
+            </ul>
+          </article>
+
+          <article class="exp-card">
+            <div class="exp-head">
+              <div>
+                <h3>Atos, formerly Xerox</h3>
+                <h4>Senior IT Helpdesk Analyst, L3</h4>
+              </div>
+              <div class="exp-date">Oct 2016 &mdash; May 2020</div>
+            </div>
+            <ul>
+              <li>Acted as the trusted technical authority for McDonald&rsquo;s US.</li>
+              <li>Tech manager for CCTV, POS, kiosk, and menu boards across all sites.</li>
+              <li>Onboarded new stores and franchisees, including the tech setup of the whole restaurant.</li>
+              <li>Used ServiceNow as the ticketing system, plus LMS and SAP ERP tools.</li>
+              <li>Experienced in network switches and cable planning.</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="skills">
+    <section class="section" id="capabilities">
       <div class="container">
         <div class="section-title">
           <div>
-            <div class="eyebrow">Skills</div>
-            <h2>Technical, operational, and creative systems expertise.</h2>
+            <div class="eyebrow">Capabilities</div>
+            <h2>What I own when I run a service desk.</h2>
           </div>
           <p>
-            A broad toolkit across CRM, automation, content systems, analytics, project delivery, and creative production.
+            The operating model I bring: queue and escalation design, measurable SLA governance, and onboarding that gets clients live without a backlog.
+          </p>
+        </div>
+
+        <div class="cap-grid">
+          <article class="project-card">
+            <h3>Service Desk Operations</h3>
+            <p>Team structure, coverage, queue design, and escalation paths for desks from 2 to 25 FTEs, alongside the engineering teams they support.</p>
+          </article>
+          <article class="project-card">
+            <h3>Incident &amp; Outage Management</h3>
+            <p>Triage, major incident coordination, and clear communication to internal and external stakeholders while production is degraded.</p>
+          </article>
+          <article class="project-card">
+            <h3>SLA &amp; KPI Governance</h3>
+            <p>Weekly and monthly SLA and KPI reporting, plus biweekly stakeholder sync-ups that keep clients aligned on service performance.</p>
+          </article>
+          <article class="project-card">
+            <h3>ITSM Tooling &amp; Automation</h3>
+            <p>JIRA Service Desk, ServiceNow, and Salesforce Service Desk ownership, including ticket automation, email workflow, and CRM configuration.</p>
+          </article>
+          <article class="project-card">
+            <h3>Client Onboarding &amp; Go-Live</h3>
+            <p>Taking new clients, stores, and franchisees from contract to a live, supported service desk with documented process and handover.</p>
+          </article>
+          <article class="project-card">
+            <h3>Compliance &amp; Process Improvement</h3>
+            <p>Led ISO 27001 certification for an organisation, and apply Lean Six Sigma Black Belt method to reduce ticket volume and cycle time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="toolkit">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow">Toolkit</div>
+            <h2>Tools and platforms I have run in production.</h2>
+          </div>
+          <p>
+            ITSM and ticketing platforms first, plus the enterprise systems and client applications my desks have supported.
           </p>
         </div>
 
         <div class="skills-grid">
           <div class="panel">
-            <div class="chips">
-              <span class="chip">Salesforce</span>
-              <span class="chip">ServiceNow</span>
+            <div class="eyebrow">Systems &amp; Tools</div>
+            <div class="chips" style="margin-top:20px;">
+              <span class="chip is-key">JIRA Service Desk</span>
+              <span class="chip is-key">ServiceNow</span>
+              <span class="chip is-key">Salesforce</span>
+              <span class="chip is-key">Confluence</span>
+              <span class="chip">Atlassian Suite</span>
               <span class="chip">Zoho</span>
               <span class="chip">AgileCRM</span>
+              <span class="chip">OrangeCRM</span>
               <span class="chip">ClickUp</span>
-              <span class="chip">Atlassian</span>
-              <span class="chip">WordPress</span>
-              <span class="chip">Elementor Pro</span>
-              <span class="chip">Adobe Illustrator</span>
-              <span class="chip">Photoshop</span>
-              <span class="chip">Premiere Pro</span>
-              <span class="chip">Google Analytics 4</span>
-              <span class="chip">SEO Analysis</span>
-              <span class="chip">Google Workspace</span>
+              <span class="chip">SAP ERP</span>
+              <span class="chip">SAP LMS</span>
               <span class="chip">Microsoft 365</span>
-              <span class="chip">Project Management</span>
-              <span class="chip">Automation Workflows</span>
-              <span class="chip">CRM Configuration</span>
+              <span class="chip">Google Workspace</span>
+              <span class="chip">HTML</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">SCORM</span>
+              <span class="chip">Network switches</span>
+              <span class="chip">Ticket automation</span>
+              <span class="chip">Email workflow</span>
+              <span class="chip">CRM configuration</span>
             </div>
           </div>
 
           <div class="panel">
-            <div class="eyebrow">Additional Strengths</div>
-            <ul style="margin-top:18px; padding-left: 18px; line-height:1.9;">
-              <li>Social media management and content creation</li>
-              <li>Business development and lead generation</li>
-              <li>Press release and article writing</li>
-              <li>Scrum, sprint, and stakeholder coordination</li>
-              <li>Support leadership and escalation management</li>
-              <li>Client onboarding, compliance, and operations structuring</li>
-            </ul>
+            <div class="eyebrow">Platforms Supported</div>
+            <p class="muted" style="margin:16px 0 20px;">Enterprise and consumer applications supported or contributed to across the Atos, SAP, EMAPTA, and NXTGEN roles.</p>
+            <div class="chips">
+              <span class="chip">Unilever TMS</span>
+              <span class="chip">Maersk Ocean Shipping TMS</span>
+              <span class="chip">e2open Cloud Logistics</span>
+              <span class="chip">Security Bank Mobile App</span>
+              <span class="chip">GrabPay Wallet</span>
+              <span class="chip">PayMaya</span>
+              <span class="chip">Booking.com</span>
+              <span class="chip">Agoda</span>
+              <span class="chip">FoodPanda Wallet</span>
+              <span class="chip">Watsons eCommerce</span>
+            </div>
           </div>
         </div>
       </div>
@@ -775,14 +890,14 @@
     <section class="section" id="contact">
       <div class="container">
         <div class="cta-box">
-          <div class="eyebrow">Call To Action</div>
-          <h2>Need an operations leader who understands both systems and outcomes?</h2>
+          <div class="eyebrow">Open To Opportunities</div>
+          <h2>Looking for a service desk manager who owns the SLA?</h2>
           <p>
-            Adam helps businesses streamline operations, support clients at scale, improve workflows, and execute digital systems with technical clarity and business impact.
+            I take service desks from reactive queues to measured operations: automated ticketing, clean escalation paths, incident and outage discipline, and reporting your clients can act on.
           </p>
           <div class="cta-actions">
-            <a class="btn btn-primary" href="mailto:abelda@gemucubesolutions.com">Email abelda@gemucubesolutions.com</a>
-            <a class="btn btn-secondary" href="mailto:abelda@gemucubesolutions.com?subject=Let's%20Work%20Together">Book a Conversation</a>
+            <a class="btn btn-primary" href="mailto:argbelda@gmail.com">Email argbelda@gmail.com</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/adambelda" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
           </div>
         </div>
 
@@ -791,21 +906,25 @@
             <div class="info-list">
               <div class="info-item">
                 <span>Email</span>
-                <strong><a href="mailto:abelda@gemucubesolutions.com">abelda@gemucubesolutions.com</a></strong>
+                <strong><a href="mailto:argbelda@gmail.com">argbelda@gmail.com</a></strong>
               </div>
               <div class="info-item">
-                <span>Phone</span>
-                <strong><a href="tel:+639478954125">+63 947 895 4125</a></strong>
+                <span>Mobile</span>
+                <strong><a href="tel:+639568992023">+63 956 899 2023</a></strong>
               </div>
               <div class="info-item">
                 <span>LinkedIn</span>
                 <strong><a href="https://www.linkedin.com/in/adambelda" target="_blank" rel="noopener noreferrer">linkedin.com/in/adambelda</a></strong>
               </div>
+              <div class="info-item">
+                <span>Address</span>
+                <strong>General Trias City, Cavite 4107, Philippines</strong>
+              </div>
             </div>
           </div>
           <div class="panel">
-            <p class="lead">Available for operations leadership, client success, digital systems strategy, CRM optimization, and technical project execution.</p>
-            <p class="muted" style="margin-top:12px;">This version also fixes the image container by using a stable portrait shell with proper object-fit sizing, so the photo displays cleanly instead of appearing broken or distorted.</p>
+            <p class="lead">Available for Service Desk Manager, IT Operations Manager, and Support Leadership roles, on-site in Cavite or remote.</p>
+            <p class="muted" style="margin-top:14px;">Professional references are available on request.</p>
           </div>
         </div>
       </div>
@@ -814,8 +933,8 @@
 
   <footer class="footer">
     <div class="container footer-bar">
-      <div>© 2026 Adam Belda Portfolio</div>
-      <div>Designed by Gemucube Solutions.</div>
+      <div>&copy; 2026 Adam Raymond Belda</div>
+      <div>IT Operations Manager / Service Desk Manager</div>
     </div>
   </footer>
 </body>
