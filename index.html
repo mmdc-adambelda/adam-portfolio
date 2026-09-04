@@ -343,6 +343,76 @@
 
   .info-item strong { font-weight: 600; }
 
+  /* Latin honors highlight */
+  .honor {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin: 12px 0 14px;
+    padding: 8px 16px 8px 13px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,215,106,.42);
+    background: linear-gradient(120deg, rgba(255,215,106,.12), rgba(215,255,63,.10));
+    box-shadow: 0 8px 28px rgba(255,215,106,.16);
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    letter-spacing: .02em;
+    white-space: nowrap;
+  }
+
+  .honor::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 36%, rgba(255,255,255,.45) 50%, transparent 64%);
+    transform: translateX(-125%);
+    animation: honor-sweep 4.2s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes honor-sweep {
+    0%, 55% { transform: translateX(-125%); }
+    100% { transform: translateX(125%); }
+  }
+
+  .honor-star {
+    font-size: 13px;
+    line-height: 1;
+    color: #ffd76a;
+    filter: drop-shadow(0 0 7px rgba(255,215,106,.85));
+    animation: honor-twinkle 2.6s ease-in-out infinite;
+  }
+
+  @keyframes honor-twinkle {
+    0%, 100% { opacity: .55; transform: scale(.82) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1.18) rotate(90deg); }
+  }
+
+  .honor-text {
+    font-weight: 800;
+    background: linear-gradient(90deg, #ffd76a, #fff6d0, #d7ff3f, #ffd76a);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: honor-shift 6s linear infinite;
+  }
+
+  @keyframes honor-shift {
+    to { background-position: 300% 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .honor::after,
+    .honor-star,
+    .honor-text {
+      animation: none;
+    }
+    .honor::after { opacity: 0; }
+  }
+
   /* Experience timeline */
   .timeline {
     display: grid;
@@ -680,7 +750,8 @@
               <div class="info-item">
                 <span>Education</span>
                 <strong>
-                  Mapua Malayan Digital College &middot; BS Information Technology, major in Software Development &middot; Class of 2026, Pioneer Batch &middot; Magna Cum Laude, 1.26 GWA<br><br>
+                  Mapua Malayan Digital College &middot; BS Information Technology, major in Software Development &middot; Class of 2026, Pioneer Batch<br>
+                  <span class="honor"><span class="honor-star" aria-hidden="true">&#10022;</span><span class="honor-text">Magna Cum Laude &middot; 1.26 GWA</span></span><br>
                   Lyceum of the Philippines University, Cavite &middot; AB Multimedia Arts, major in Film Production
                 </strong>
               </div>
